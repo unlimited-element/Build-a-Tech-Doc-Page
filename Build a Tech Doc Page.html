@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Build a Technical Documentation Page</title><br>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<style>
+
+body {
+  min-width: 290px;
+    color: #4d4e53;
+      background-color: #ffffff;
+        font-family: 'Times New Roman', Arial, sans-serif;
+}
+
+a:link, a:visited {
+  color: black;
+  font-size: 1.1rem;
+  padding: 20px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: grey;
+}
+
+#navbar {
+  position: fixed;
+  border-right: solid;
+  min-width: 15rem;
+  top: 0px;
+  /* left: 0px; */
+  width: 15rem;
+  height: 100%;
+  overflow: scroll;
+}
+
+#list {
+  padding: 2.3rem 1.1rem;
+  list-style: none;
+  border-top: 1px solid;
+  border-color: black;
+  width: 80%;
+}
+header {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+}
+
+@media screen and (max-width: 400px) {
+  #navbar {
+  width: 1.5rem;
+}
+}
+</style>
+</head>
+<body>
+  <nav id="navbar">
+    <header style="padding: 0px 20px; text-align: center; ">Low Voltage Motor Technical Doc</header>
+      <ul>
+        <li id="list"><a class="nav-link" href="#introduction">Introduction<a></li>
+          <li id="list"><a class="nav-link" href="#safety_information">Safety Information<a></li>
+          <li id="list"><a class="nav-link" href="#preparations_for_use">Preparations For Use<a></li>
+              <li id="list"><a class="nav-link" href="#operation">Operation<a></li>
+                <li id="list"><a class="nav-link" href="#service_and_support">Service And Support<a></li>
+                  <li id="list"><a class="nav-link" href="#operational_codes">Operational Codes<a></li>
+        </ul>
+    </nav>
+
+<main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header>Introduction</header>
+      <p>In the following text, the motor is referred to as "electrical machine" – or abbreviated as just "machine".
+      </p>
+    </section>
+
+    <section class="main-section" id="safety_information">
+      <header>Safety information</header>
+        <p>For your own personal safety and to prevent material damage when carrying out any work, always observe the safety-relevant instructions and the following five safety rules according to EN 50110‑1 "Working in a voltage-free state". Apply the five safety rules in the sequence stated before starting work.
+
+        5 safety rules:
+        <ol>
+          <li>Disconnect the system. (Also disconnect the auxiliary circuits, for example, anti-condensation heating.)</li>
+          <li>Secure against reconnection.</li>
+          <li>Verify absence of operating voltage.</li>
+          <li>Ground and short-circuit.</li>
+          <li>Provide protection against adjacent live parts.</li>
+        </ol>
+        To energize the system, apply the measures in reverse order.
+        </p>
+
+        <b>Electromagnetic fields</b>
+        <p>Electrical power equipment generate electromagnetic fields during operation. Potentially lethal malfunctions can occur in medical implants, e.g. pacemakers, in the vicinity of electrical power equipment. Data may be lost on magnetic or electronic data carriers.
+
+        Protect the personnel working in the plant by taking appropriate measures, such as erecting identifying markings, safety barriers and warning signs and giving safety talks.
+        Observe the nationally applicable health and safety regulations.
+        It is forbidden for people with pacemakers to be close to the machine.
+        Do not carry any magnetic or electronic data media.
+        </p>
+
+        <b>Safe Handling</b>
+
+        <p>
+        Workplace safety depends on the attentiveness, care, and common sense of the personnel who install, operate, and maintain the machine. In addition to the safety measures cited, as a matter of principle, the use of caution is necessary when you are near the machine. Always pay attention to your safety.</p>
+
+        Also observe the following to prevent accidents:
+        <ul>
+            <li>General safety regulations applicable in the country where the machine is deployed.<li>
+            <li>Manufacturer-specific and application-specific regulations<li>
+            <li>Special agreements made with the operator<li>
+            <li>Separate safety instructions supplied with the machine<li>
+            <li>Safety symbols and instructions on the machine and its packaging</li>
+          </ul>
+        </p>
+
+        <p>
+        Danger as a result of stationary parts under voltage (live parts)
+        Live parts represent a hazard. Touch protection against active (live) parts is no longer guaranteed if covers are removed. The minimum clearance and creepage distances may be violated when coming close to live parts. Touching or coming close to them can result in death, serious injury or material damage.
+        <ul>
+            <li>Ensure that all live parts are suitably covered.</li>
+            <li>Switch off and disconnect the machine first if you want to remove covers. Observe the "5 safety rules".</li>
+          </ul>
+        </p>
+        <b>Risk of injury due to rotating parts</b>
+        <p>
+        Rotating parts are dangerous. Touch protection against rotating parts is no longer guaranteed if covers are removed. Touching rotating parts can result in death, serious injury or material damage.
+        <ul>
+            <li>Ensure that all rotating parts are reliably covered.</li>
+            <li>Switch off and disconnect the machine first if you want to remove covers. Observe the "5 safety rules".</li>
+            <li>Only remove covers when the rotating parts have come to a complete standstill.</li>
+          </ul>
+        </p>
+        Risk of burns due to hot surfaces
+
+        Individual machine parts can become hot in operation. Burns can result when coming into contact with these parts.
+        </p>
+        <ul>
+            <li>Never touch machine parts during operation.
+            <li>Allow the machine to cool before starting work on the machine.
+            <li>Check the temperature of parts before touching them. If required, wear suitable protective equipment.
+          </ul>
+        </p>
+        <p>
+        <b>Health hazard due to chemical substances</b>
+
+        Chemical substances required for the setup, operation and maintenance of machines can present a health risk.
+
+        Observe the product information provided by the manufacturer.
+          </p>
+        <p>
+        <b>Flammable substances hazard</b>
+        <br>
+        Chemical substances required for the setup, operation and maintenance of machines may be flammable. These substances can ignite if handled incorrectly. They can cause burns and property damage.
+        <ul>
+            <li>Observe the product information provided by the manufacturer.</li>
+          </ul>
+
+        <b>Noise emissions</b>
+          </p>
+        <p>
+        During operation, the machine's noise emission levels can exceed those permitted at the workplace, which can cause hearing damage.
+
+        Ensure that nobody is in the area of increased noise emissions during machine operation.
+        Take steps to reduce noise so that the machine can be operated safely within your system. The following measures may help to reduce noise.
+        <ul>
+            <li>Covers</li>
+            <li>Noise insulation</li>
+            <li>Hearing protection measures</li>
+          </ul>
+        </p>
+    </section>
+
+    <section class="main-section" id="preparations_for_use">
+      <header>Preparations for use</header>
+      <p>Observe the machine's operating mode. Use a suitable control system to prevent overspeeds, thus protecting the machine from damage.
+      </p>
+
+      <b>Ensuring cooling</b>
+      <p>
+        Ensure that the machine and/or any mounted external fan unit is sufficiently cooled by the cooling air flow at the installation site:
+        <ul>
+          <li>The cooling air can flow in and out freely. The full air flow provided by the fan is only achieved if air can freely enter the impeller. Ensure that the required distance in accordance with the dimensioned drawing is maintained.</li>
+          <li>Hot discharged air must not be drawn in again.</li>
+          <li>On the vertical design with air intake from above, the air inlets must be protected against the ingress of foreign bodies and water.</li>
+        </ul>
+      </p>
+
+      <b>Torsional load of the drive train</b>
+      <p>
+      In the event of faults in the electrical connection during operation, excessive air gap torques can lead to additional mechanical torsional load on the line shaft.
+      <table>
+        <tbody>
+      <tr valign="top">
+                    <td>
+                    </td><td>
+                      <hr>
+                      <p>
+                        <b>Note</b>
+                      </p>
+                      <p class="default">The system planner is responsible for the entire drive train. </p>
+                      <hr>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+        <img src="https://github.com/unlimited-element/Build-a-Tech-Doc-Page/blob/Images/caution.png?raw=true" alt="warning sign">
+      <b>Warning</b><br>
+
+      <b>Torsional loadings of the shaft assembly</b>
+      <p>
+      If the configuration does not correctly recognize the mechanical torsional loadings of the shaft assembly, this can lead to serious damage to the machine. This can result in death, serious injury or material damage.
+    </p>
+      <p>
+      When planning the system, consider the configuration data.
+    </p>
+
+    </section>
+
+    <section class="main-section" id="operation">
+      <header>Operation</header>
+
+      <b>Switching on the machine</b>
+      <ol>
+      <p><li>If at all possible, run the machine without load and check that it is running smoothly.</li>
+          <li>If it runs perfectly, connect a load.</li>
+          <br>
+          <b>Notice</b>
+          <br>
+      <b>Thermal overload of motors connected directly to the line supply</b><br>
+      In addition to the load torque, the ramp-up (accelerating) time is essentially influenced by the moment of inertia to be accelerated. While ramping up when connected to the line supply, the inrush (starting) current is a multiple of the rated current. This can result in thermal overload. This can damage the motor.
+
+      As a consequence, when ramping up, observe the following:
+
+      Monitor the ramp-up time and number of consecutive starts.
+
+      Comply with the limit values and/or ramp-up conditions specified in the catalog or the order documentation.
+          <br>
+          <br>
+          <li>If this is possible using the available measuring equipment, check the bearing and stator winding temperatures.</li>
+        </ol>
+      </p>
+      Inspections in the event of faults<br>
+      <p>
+      Natural disasters or unusual operating conditions, such as overloading or short circuit, are faults that overload the machine electrically or mechanically.
+      Immediately perform an inspection after such faults.
+      Correct the cause of the fault as described in the respective remedial measures section. Repair any damage to the machine.
+    </p>
+    </section>
+
+    <section class="main-section" id="service_and_support">
+      <header>Service and Support</header>
+  <br>
+  <b>Technical questions or additional information</b>
+  <div>
+    <table cellspacing="0"width="70%">
+      <colgroup>
+        <col width="20.0%">
+        <col width="80.0%">
+      </colgroup>
+      <tbody><tr>
+        <td class="">
+          <p>
+            <a target="_blank" title="" href="/dokumentation/MDMImage.img?docVersionId=121060533515&amp;imageName=118854551179.PNG&amp;Lang=en-US">
+              <img src="https://github.com/unlimited-element/Build-a-Tech-Doc-Page/blob/Images/MDMImage.png?raw=true" border="0" max-width="530" width="76">
+            </a>
+          </p>&nbsp;</td>
+        <td>
+          <p>If you have any technical questions or require additional information, please contact</p>
+          <p>Please have the following data ready:</p>
+          <ul>
+            <li>Type</li>
+            <li>Serial number</li>
+          </ul>
+          <p>You can find this data on the rating plate.</p>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <b id="">Contact person</b>
+  <div>
+    <table cellspacing="0" class="table_invisible" width="70%">
+      <colgroup>
+        <col width="20.0%">
+        <col width="80.0%">
+      </colgroup>
+      <tbody><tr>
+        <td>
+          <p>
+            <a target="_blank" title="" href="/dokumentation/MDMImage.img?docVersionId=121060533515&amp;imageName=94814041355.PNG&amp;Lang=en-US">
+              <img src="https://github.com/unlimited-element/Build-a-Tech-Doc-Page/blob/Images/MDMImage.png?raw=true" border="0" class="img_free" max-width="530" width="94">
+            </a>
+          </p>
+          <p>&nbsp;</p></td>
+        <td>
+          <p>If you wish to request on-site service or order spare parts, please contact your local office. This office will contact the responsible service center on your behalf. You can find your contact person in the relevant contact database:</p>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <b>Siemens Support for on the move</b>
+  <div>
+    <table cellspacing="0" width="70%">
+      <colgroup>
+        <col width="20.0%">
+        <col width="80.0%">
+      </colgroup>
+      <tbody><tr>
+        <td>
+          <p>
+            <a target="_blank" title="" href="/dokumentation/MDMImage.img?docVersionId=121060533515&amp;imageName=114779038219.PNG&amp;Lang=en-US">
+              <img src="https://github.com/unlimited-element/Build-a-Tech-Doc-Page/blob/Images/MDMImage.png?raw=true" border="0" class="img_free" max-width="530" width="76">
+            </a>
+          </p>&nbsp;</td>
+        <td>
+          <p>With the "Motor Online Support" App, you can access more than 300,000 documents for Motor Industry products – any time and anywhere.&nbsp;The App supports you in the following areas:</p>
+          <ul>
+            <li>Resolving problems when executing a project</li>
+            <li>Troubleshooting when faults develop</li>
+            <li>Expanding a system or planning a new system</li>
+          </ul>
+          <p>Further, you have access to the Technical Forum and other articles that our experts have drawn-up: </p>
+          <ul>
+            <li>FAQs</li>
+            <li>Application examples</li>
+            <li>Manuals</li>
+            <li>Certificates</li>
+            <li>Product announcements and many more</li>
+          </ul>
+          <p>The app is available for Apple&nbsp;iOS, Android and Windows&nbsp;Phone.</p>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+    </section>
+
+    <section class="main-section" id="operational_codes">
+      <header>Operational Codes</header>
+
+      <b>Operational Codes</b>
+      <p>
+        It is best practice to enter the following code into the motor's internal modem before beginning any repairs on the part.
+      </p>
+      <pre>
+        <code class="codes">
+          To shut down all systems in 20 seconds:
+          651354
+          To shut down all systems in 10 seconds:
+          453156
+          To shut down all systems in 5 seconds:
+          651
+          Immediate shut down:
+            111111
+        </code>
+    </pre>
+    <p>
+        To enter "self diagnostic" mode, enter the following code:<br>
+        <code>
+            11128883
+          </code>
+        </p>
+    <p>
+      To initiate "auto care" mode, enter the following code:<br>
+      <code>
+        11135456
+        </code>
+      </p>
+      <p>
+        To begin "racing" mode, enter the following code:<br>
+        <code>
+          997711
+          </code>
+        </p>
+        <p>
+          To initiate "recycle" mode, enter the following code:<br>
+          <code>
+            000001
+            </code>
+          </p>
+
+    </section>
+</main>
+  </body>
+</html>
